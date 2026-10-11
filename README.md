@@ -10,8 +10,7 @@ An order processing system where services communicate through **events** instead
 
 I built this to learn event-driven architecture and Apache Kafka from scratch, and to deal with the problems that come with distributed systems: duplicate messages, failures, ordering, and eventual consistency.
 
-> **Project status:** In progress. The Order Service (REST API + PostgreSQL) works and the Kafka infrastructure is defined. Event publishing, the Inventory and Notification services, and the reliability patterns are being built. The [Roadmap](#roadmap) shows exactly what is done and what is planned, and sections describing planned work are marked **(planned)**.
-
+> **Project status:** In progress. The Order Service (REST API + PostgreSQL) works, and Kafka and Kafka UI run locally in Docker Compose. Event publishing, the Inventory and Notification services, and the reliability patterns are being built.
 ---
 
 ## Table of contents
@@ -399,7 +398,7 @@ Add screenshots to `docs/images/` and uncomment the lines below once each one ex
 ## Roadmap
 
 - [x] Order Service REST API with PostgreSQL (entity, repository, service, controller, validation)
-- [ ] Kafka and Kafka UI running in Docker Compose
+- [x] Kafka and Kafka UI running in Docker Compose
 - [ ] Publish `OrderCreated` with `orderId` as key
 - [ ] Inventory Service: consume `OrderCreated`, reserve stock, publish result
 - [ ] Order Service: update order status from inventory results
